@@ -32,7 +32,7 @@ public class SecurityConfig {
                 .anyRequest().authenticated() // Cualquier otra URL requiere autenticación (token)
             )
             
-            // 3. 🔑 CRUCIAL: Configurar el sistema como Stateless (sin sesiones)
+            // 3. CRUCIAL: Configurar el sistema como Stateless (sin sesiones)
             .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             )
